@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Review Assistant</title>
+  
+  <!-- Link to your CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Heading -->
+    <h1>AlgoMate</h1>
+
+    <!-- Textarea for code input -->
+    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+
+    <!-- Button to trigger code analysis -->
+    <button id="analyzeButton">Analyze Code</button>
+
+    <!-- Loading spinner -->
+    <div id="loading">Analyzing...</div>
+
+    <!-- Results section -->
+    <div id="results" style="display: none;">
+      <h2 id="timeHeading">Time Complexity</h2>
+      <p id="timeComplexity"></p>
+      <h2 id="spaceHeading">Space Complexity</h2>
+      <p id="spaceComplexity"></p>
+      <h2 id="improvementsHeading">Suggested Improvements</h2>
+      <pre id="suggestedCode"></pre>
+    </div>
+
+  <!-- Link to the JavaScript file -->
+  <script src="popup.js"></script>
+</body>
+</html>

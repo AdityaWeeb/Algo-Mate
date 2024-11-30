@@ -1,0 +1,122 @@
+/* Reset and general body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecef;
+  width: 400px; /* Set exact width */
+  height: 600px; /* Set exact height */
+  margin: 0; /* Ensure no margins */
+  overflow: hidden; /* Prevent unnecessary scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%; /* Make the container fill the body */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Heading style */
+h1 {
+  font-size: 28px; /* Larger heading */
+  color: #343a40; /* Darker text */
+  text-align: center;
+}
+
+/* Textarea for code input */
+textarea {
+  width: 100%;
+  height: 300px; /* Taller textarea for code */
+  border: 2px solid #ced4da; /* Light border */
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  resize: none; /* Disable resizing */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+/* Button to trigger analysis */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s; /* Hover effects */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+/* Loading spinner or message */
+#loading {
+  font-size: 18px;
+  color: #007bff;
+  display: none; /* Hidden by default */
+  text-align: center;
+}
+
+/* Results section */
+#results {
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 8px;
+  border: 1px solid #ced4da; /* Light border */
+  display: none; /* Hidden by default */
+}
+
+#results p {
+  font-size: 16px;
+  color: #343a40; /* Darker text */
+  margin-bottom: 10px;
+}
+
+/* Suggested Code Section */
+#suggestedCode {
+  width: 100%;
+  height: 300px; /* Match textarea height */
+  background-color: #f1f3f5; /* Light gray background */
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-y: auto; /* Scrollable */
+  resize: none;
+  color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  textarea, button, #suggestedCode {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px; /* Smaller heading size */
+  }
+}

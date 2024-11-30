@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Code Review Assistant",
+  "version": "1.0",
+  "description": "Analyze code complexity using Gemini API.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png",
+    "default_title": "Code Review Assistant"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
